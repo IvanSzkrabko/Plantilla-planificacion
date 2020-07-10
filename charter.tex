@@ -1,5 +1,9 @@
 \documentclass[11pt]{charter}
 
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage[T1]{fontenc}
+
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Realidad Aumentada para la optimización de procedimientos batch en la industria} 
 	
@@ -21,7 +25,7 @@
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
+\cliente{Alejandro Carrasco}
 \empresaCliente{ABB}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
@@ -64,7 +68,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                                          & 27/06/2020 \\ \hline
-%1.1      & Ejemplo de un texto muy largo que debiera ocupar más de una línea para que tengan de ejemplo                                                                                																						   & dd/mm/aaaa \\ \hline
+1.1      & Primera version, completo hasta punto 6                                                                                																						   & 10/07/2020 \\ \hline
 %1.2      & Otro ejemplo \newline
 %		   Con texto partido \newline
 %		   En varias líneas \newline
@@ -85,7 +89,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de una aplicacion de software para la supervision y control de procesos batch en la industria, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \$2500, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing.\authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de una aplicacion de software para la supervision y control de procesos batch en la industria, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \$2500, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -108,88 +112,67 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del Proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+\begin{consigna}{black}
+El presente proyecto consiste en desarrollar una interfaz de realidad aumentada, para que los operadores de plantas industriales puedan interactuar con un sistema de control distribuido de una manera practica e innovadora. La solucion hace foco en la capacitacion de los operadores, mediante el uso de rutinas batch. Con el fin de guiarlos a traves de los distintos procedimientos industriales, como pueden ser, arranques o paradas de emergencia en equipos criticos como hornos, calderas y reactores. La solucion se implementara sobre un equipo de realidad aumentada de ultima tecnologia de Microsoft denominado HoloLens2. Su plataforma de desarrollo se divide en dos areas. Por un lado tenemos las interfaces visuales, las cuales se diseñan en Unity3D, que es una conocida plataforma para el desarrollo de videojuegos. Por otro lado tenemos el backend, este se desarrollara en .NET utilizando CSharp como lenguaje de programacion. La aplicacion embebida se comunicara con un servidor local a traves de una APIrest, y desde el mismo se enviaran los datos pertinentes al sistema de control distribuido de ABB, a traves del standard industrial OPC (Open Platform Communications). 
 
 \vspace{25px}
 
 \begin{figure}[htpb]
-\centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema}
-\label{fig:diagBloques}
+    \centering
+    \def\svgwidth{\columnwidth}
+    \fontsize{8}{5}\fontencoding{T1}\fontfamily{lmss}\fontseries{eb}\selectfont
+%	\def\svgscale{1}
+    \input{Esquema_inicial.pdf_tex}
+	\caption{Diagrama en bloques simplificado}
+	\label{fig:esquema_inicial}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+En la Figura \ref{fig:esquema_inicial} se puede observar de izquierda a derecha el flujo de la informacion, comenzando con un input en la interfaz visual por parte del operador y terminando con una accion determinada en el sistema de control.
+
+%El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+%Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+%
+%Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+%
+%\begin{itemize}
+%\item ¿Cómo se vincula este proyecto con la misión de la organización?
+%\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
+%\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
+%\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
+%\item ¿Cuales son las necesidades que debe satisfacer?
+%\item ¿Por dónde pasa la innovación?
+%\end{itemize}
+
 \end{consigna}
 
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
-
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
-
+\begin{consigna}{black} 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Rol           & Nombre y Apellido & Organización 	& Puesto 					\\ \hline
+Auspiciante   & Victor Toledo     & ABB         	& Gerente de Operaciones	\\ \hline
+Cliente       & \clientename      &\empclientename	& Gerente de Ingenieria     \\ \hline
+Impulsor      & Guillermo Lamana  & ABB           	& Project Manager       	\\ \hline
+Responsable   & \authorname       & FIUBA        	& Alumno 					\\ \hline
+Orientador    & \supname	      & \pertesupname 	& Director Trabajo final    \\ \hline
 \end{tabularx}
 \end{table}
-
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
  
-Por ejemplo:
+Analisis de los interesados:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+\item Auspiciante: es riguroso y exigente con la utilizacion de los recursos y el tiempo.
+\item Cliente: es detallista y busca que el producto sea perfecto.
+\item Impulsor: es una persona que tiene ademas un rol de facilitador.
+\item Orientador: sera una fuente valiosa de consulta.
 \end{itemize}
 
 \end{consigna}
@@ -199,90 +182,83 @@ Por ejemplo:
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+\begin{consigna}{black}
+El proposito de este proyecto es innovar en la interaccion entre los operadores y los sistema de control distribuidos, para impulsar nuevas soluciones en el area de la automatizacion industrial. Se buscan explorar las oportunidades que ofrece la realidad aumentada para mejorar y optimizar las tareas de los operadores, además de agilizar el entrenamiento de nuevos operarios y mejorar la seguridad para procedimientos bajo situaciones de emergencia.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+\begin{consigna}{black}
+\textbf{El alcance del proyecto contempla:}
+\begin{itemize}
+\item Desarrollar una interfaz visual para el HoloLens2 que permita realizar el seguimiento de procesos batch y rutinas de emergencia.
+\item Desarrollar una interfaz de comunicación entre el HoloLens2 y un servidor web a traves de una APIrest.
+\item Desarrollar una interfaz de comunicación OPC entre el servidor web y el sistema de control.
+\item Implementar lecturas de códigos QR para lograr el reconocimiento de equipos en planta.
+\item Implementar un modo de visualización donde los elementos físicos de planta se complementen con la información del sistema de control, para indicar al operador el estado de cada elemento y sus propiedades en el sistema.
+\item Implementar visualización de despieces mecánicos para guiar a los operadores en las tareas de mantenimiento.
+\end{itemize}
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
+\textbf{El alcance del proyecto no incluye:}
+\begin{itemize}
+\item Aquellas funcionalidades que no se encuetren contempladas dentro del alcance definido.
+\end{itemize}
 \end{consigna}
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+\begin{consigna}{black}
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item Se dispone de 48hs semanales para dedicar al desarrollo de la solucion
+\item Se tiene acceso al HoloLens2 durante el desarrollo de la solucion
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+\begin{consigna}{black}
+A continuacion se listan los requirimientos en base a las distintas etapas de la solucion:
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Requerimientos asociados al desarrollo de la interfaz visual:
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
+	\item La interfaz debe ser intuitiva y simple.
+	\item El idioma definido es ingles.
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Requerimientos asociados al desarrollo de logica en .NET:
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+	\item La aplicacion debe ser fluida y responder sin demoras.
+	\item La aplicacion debe poder hacer operaciones GET y POST sobre un servidor web, ya sea local o en la nube.
+	\end{enumerate}
+\item Requerimientos asociados a la API rest:
+	\begin{enumerate}
+	\item La API no sera de acceso publico, solo podra ser consultada por las aplicaciones que poseean un token de seguridad.
+	\end{enumerate}
+\item Requerimientos asociados a la interfaz de comunicacion con el sistema de control:	
+	\begin{enumerate}	
+	\item La solucion debe poder consultar una serie de datos especificos a eleccion, de los elementos que pertenecen al sistema de control.
+	\item La comunicacion debe cumplir con el standard OPC.
 	\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
 
 \end{consigna}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
+\begin{consigna}{black}
+Se entregaran los siguientes elementos:
 \begin{itemize}
 \item Manual de uso
 \item Diagrama esquemático
-\item Código fuente
-\item Diagrama de instalación
 \item Informe final
-
 \end{itemize}
 
 \end{consigna}
@@ -290,35 +266,58 @@ Cosas como:
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
+\begin{consigna}{black}
+Se divide el trabajo del proyecto en tareas y subtareas. Para facilitar el seguimiento, ninguna subtarea
+consumirá más de 40 horas:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Investigacion (Total: 24 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Busqueda de referencias a proyectos similares. (8 hs)
+	\item Busqueda y analisis de frameworks utiles para desarrollar las soluciones.  (8 hs)
+	\item Investigacion de los servicios de Azure, para integrar al desarrollo. (8 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Desarrollo de la interfaz visual: (Total: 88 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Diseño de interfaz para la lectura de codigos QR. (16 hs)
+	\item Diseño de interfaz para visualizacion de la informacion de los elementos del sistema de control. (16 hs)
+	\item Diseño de interfaz para guiar al operador a traves de los distintos pasos del procedimiento batch. (40 hs)
+	\item Pruebas, correcciones y mejoras. (16 hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item Desarrollo de la logica para la interfaz visual: (Total: 136 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Desarrollo de la logica para realizar las lecturas de codigos QR. (40 hs)
+	\item Desarrollo de la logica para realizar la interaccion del operador con los datos del sistema. (32 hs)
+	\item Desarrollo de la logica para guiar al operador a traves de los distintos pasos del procedimiento batch. (32 hs)
+	\item Pruebas, correcciones y mejoras. (32 hs)
 	\end{enumerate}
+\item Desarrollo de la API rest (Total: 152 hs)
+	\begin{enumerate}
+	\item Investigacion de distintas tecnologias. (16 hs)
+	\item Desarrollo de la solucion:
+		\begin{enumerate}
+			\item Programacion de endpoints. (40 hs)
+			\item Implementacion de medidas de seguridad de la API. (40 hs)
+			\item Hosting de la API. (40 hs)
+		\end{enumerate}
+	\item Pruebas, correcciones y mejoras. (16 hs)
+	\end{enumerate}
+\item Desarrollo de la interfaz de comunicacion OPC. (Total: 160 hs)
+	\begin{enumerate}
+	\item Investigacion de frameworks y analisis del protocolo (40 hs)
+	\item Deploy del cliente OPC (40 hs)
+	\item Desarrollo de la comunicacion con el server OPC (40 hs)
+	\item Pruebas, correcciones y mejoras. (40 hs)
+	\end{enumerate}
+
+\item Pruebas integrales (Total: 32 hs)
+
+\item Documentacion (Total: 32 hs)
+
+\item Presentaciones al cliente (Total: 16 hs)
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
+Cantidad total de horas: (640 hs) 
 
 \end{consigna}
 
