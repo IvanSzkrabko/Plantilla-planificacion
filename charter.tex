@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Realidad Aumentada para la optimización de procedimientos batch en la industria} 
+\titulo{Realidad Aumentada para la optimización de procedimientos \textit{batch} en la industria} 
 	
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -18,8 +18,8 @@
 \autor{Iván Szkrabko} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Leandro Lanzieri}
+\pertenenciaDirector{UTN} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -68,7 +68,8 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                                          & 27/06/2020 \\ \hline
-1.1      & Primera version, completo hasta punto 6                                                                                																						   & 10/07/2020 \\ \hline
+1.1      & Primera versión, completo hasta punto 6                                                                                																						   & 10/07/2020 \\ \hline
+1.2      & Completo hasta punto 11 																						   & 30/07/2020 \\ \hline
 %1.2      & Otro ejemplo \newline
 %		   Con texto partido \newline
 %		   En varias líneas \newline
@@ -80,7 +81,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 
 
 
-\section{Acta de Constitución del Proyecto}
+\section{Acta de constitución del proyecto}
 \label{sec:acta}
 
 \begin{flushright}
@@ -89,7 +90,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing.\authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de una aplicacion de software para la supervision y control de procesos batch en la industria, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \$2500, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing.\authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de una aplicación de software para la supervisión y control de procesos \textit{batch} en la industria, y tendrá un presupuesto preliminar estimado de 640 hs de trabajo y \$ 2500, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -109,11 +110,13 @@ Se adjunta a esta acta la planificación inicial.
 
 
 
-\section{Descripción técnica-conceptual del Proyecto a realizar}
+\section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
 \begin{consigna}{black}
-El presente proyecto consiste en desarrollar una interfaz de realidad aumentada, para que los operadores de plantas industriales puedan interactuar con un sistema de control distribuido de una manera practica e innovadora. La solucion hace foco en la capacitacion de los operadores, mediante el uso de rutinas batch. Con el fin de guiarlos a traves de los distintos procedimientos industriales, como pueden ser, arranques o paradas de emergencia en equipos criticos como hornos, calderas y reactores. La solucion se implementara sobre un equipo de realidad aumentada de ultima tecnologia de Microsoft denominado HoloLens2. Su plataforma de desarrollo se divide en dos areas. Por un lado tenemos las interfaces visuales, las cuales se diseñan en Unity3D, que es una conocida plataforma para el desarrollo de videojuegos. Por otro lado tenemos el backend, este se desarrollara en .NET utilizando CSharp como lenguaje de programacion. La aplicacion embebida se comunicara con un servidor local a traves de una APIrest, y desde el mismo se enviaran los datos pertinentes al sistema de control distribuido de ABB, a traves del standard industrial OPC (Open Platform Communications). 
+El presente proyecto consiste en desarrollar una interfaz de realidad aumentada, para que los operadores de plantas industriales puedan interactuar con un sistema de control distribuido de una manera practica e innovadora. La solución hace foco en la capacitación de los operadores, mediante el uso de rutinas \textit{batch}. Con el fin de guiarlos a través de los distintos procedimientos industriales, como pueden ser, arranques o paradas de emergencia en equipos críticos como hornos, calderas y reactores. La solución se implementara sobre un equipo de realidad aumentada de ultima tecnología de Microsoft denominado HoloLens2. Su plataforma de desarrollo se divide en dos áreas. Por un lado tenemos las interfaces visuales, las cuales se diseñan en Unity3D, que es una conocida plataforma para el desarrollo de videojuegos. Por otro lado tenemos el backend, este se desarrollara en .NET utilizando CSharp como lenguaje de programación. La aplicación embebida se comunicara con un servidor local a través de una APIrest, y desde el mismo se enviaran los datos pertinentes al sistema de control distribuido de ABB, a través del \textit{standard} industrial OPC (\textit{Open Platform Communications}).  
+
+En la Figura \ref{fig:esquema_inicial} se puede observar de izquierda a derecha el flujo de la información, que comienza con un \textit{input} en la interfaz visual por parte del operador y termina con una acción determinada en el sistema de control.
 
 \vspace{25px}
 
@@ -129,22 +132,6 @@ El presente proyecto consiste en desarrollar una interfaz de realidad aumentada,
 
 \vspace{25px}
 
-En la Figura \ref{fig:esquema_inicial} se puede observar de izquierda a derecha el flujo de la informacion, comenzando con un input en la interfaz visual por parte del operador y terminando con una accion determinada en el sistema de control.
-
-%El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-%Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
-%
-%Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-%
-%\begin{itemize}
-%\item ¿Cómo se vincula este proyecto con la misión de la organización?
-%\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-%\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-%\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-%\item ¿Cuales son las necesidades que debe satisfacer?
-%\item ¿Por dónde pasa la innovación?
-%\end{itemize}
-
 \end{consigna}
 
 
@@ -159,20 +146,20 @@ En la Figura \ref{fig:esquema_inicial} se puede observar de izquierda a derecha 
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 					\\ \hline
-Auspiciante   & Victor Toledo     & ABB         	& Gerente de Operaciones	\\ \hline
-Cliente       & \clientename      &\empclientename	& Gerente de Ingenieria     \\ \hline
+Auspiciante   & Víctor Toledo     & ABB         	& Gerente de Operaciones	\\ \hline
+Cliente       & \clientename      &\empclientename	& Gerente de Ingeniería     \\ \hline
 Impulsor      & Guillermo Lamana  & ABB           	& Project Manager       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 					\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final    \\ \hline
 \end{tabularx}
 \end{table}
  
-Analisis de los interesados:
+Análisis de los interesados:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la utilizacion de los recursos y el tiempo.
+\item Auspiciante: es riguroso y exigente con la utilización de los recursos y el tiempo.
 \item Cliente: es detallista y busca que el producto sea perfecto.
-\item Impulsor: es una persona que tiene ademas un rol de facilitador.
-\item Orientador: sera una fuente valiosa de consulta.
+\item Impulsor: es una persona que tiene además un rol de facilitador.
+\item Orientador: será una fuente valiosa de consulta.
 \end{itemize}
 
 \end{consigna}
@@ -183,7 +170,7 @@ Analisis de los interesados:
 \label{sec:proposito}
 
 \begin{consigna}{black}
-El proposito de este proyecto es innovar en la interaccion entre los operadores y los sistema de control distribuidos, para impulsar nuevas soluciones en el area de la automatizacion industrial. Se buscan explorar las oportunidades que ofrece la realidad aumentada para mejorar y optimizar las tareas de los operadores, además de agilizar el entrenamiento de nuevos operarios y mejorar la seguridad para procedimientos bajo situaciones de emergencia.
+El propósito de este proyecto es innovar en la interacción entre los operadores y los sistema de control distribuidos, para impulsar nuevas soluciones en el área de la automatización industrial. Se busca explorar las oportunidades que ofrece la realidad aumentada para mejorar y optimizar las tareas de los operadores, además de agilizar el entrenamiento de nuevos operarios y mejorar la seguridad para procedimientos bajo situaciones de emergencia.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
@@ -192,8 +179,8 @@ El proposito de este proyecto es innovar en la interaccion entre los operadores 
 \begin{consigna}{black}
 \textbf{El alcance del proyecto contempla:}
 \begin{itemize}
-\item Desarrollar una interfaz visual para el HoloLens2 que permita realizar el seguimiento de procesos batch y rutinas de emergencia.
-\item Desarrollar una interfaz de comunicación entre el HoloLens2 y un servidor web a traves de una APIrest.
+\item Desarrollar una interfaz visual para el HoloLens2 que permita realizar el seguimiento de procesos \textit{batch} y rutinas de emergencia.
+\item Desarrollar una interfaz de comunicación entre el HoloLens2 y un servidor web a través de una APIrest.
 \item Desarrollar una interfaz de comunicación OPC entre el servidor web y el sistema de control.
 \item Implementar lecturas de códigos QR para lograr el reconocimiento de equipos en planta.
 \item Implementar un modo de visualización donde los elementos físicos de planta se complementen con la información del sistema de control, para indicar al operador el estado de cada elemento y sus propiedades en el sistema.
@@ -202,7 +189,7 @@ El proposito de este proyecto es innovar en la interaccion entre los operadores 
 
 \textbf{El alcance del proyecto no incluye:}
 \begin{itemize}
-\item Aquellas funcionalidades que no se encuetren contempladas dentro del alcance definido.
+\item Aquellas funcionalidades que no se encuentren contempladas dentro del alcance definido.
 \end{itemize}
 \end{consigna}
 
@@ -214,8 +201,8 @@ El proposito de este proyecto es innovar en la interaccion entre los operadores 
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Se dispone de 48hs semanales para dedicar al desarrollo de la solucion
-\item Se tiene acceso al HoloLens2 durante el desarrollo de la solucion
+\item Se dispone de 48 hs semanales para dedicar al desarrollo de la solución
+\item Se tiene acceso al HoloLens2 durante el desarrollo de la solución
 \end{itemize}
 
 \end{consigna}
@@ -224,7 +211,7 @@ Para el desarrollo del presente proyecto se supone que:
 \label{sec:requerimientos}
 
 \begin{consigna}{black}
-A continuacion se listan los requirimientos en base a las distintas etapas de la solucion:
+A continuación se listan los requerimientos en base a las distintas etapas de la solución:
 
 \begin{enumerate}
 \item Requerimientos asociados al desarrollo de la interfaz visual:
@@ -232,19 +219,19 @@ A continuacion se listan los requirimientos en base a las distintas etapas de la
 	\item La interfaz debe ser intuitiva y simple.
 	\item El idioma definido es ingles.
 	\end{enumerate}
-\item Requerimientos asociados al desarrollo de logica en .NET:
+\item Requerimientos asociados al desarrollo de lógica en .NET:
 	\begin{enumerate}
-	\item La aplicacion debe ser fluida y responder sin demoras.
-	\item La aplicacion debe poder hacer operaciones GET y POST sobre un servidor web, ya sea local o en la nube.
+	\item La aplicación debe ser fluida y responder sin demoras apreciables por el operador, estableciéndose así el limite máximo de espera en 2 segundos.
+	\item La aplicación debe poder hacer operaciones GET y POST sobre un servidor web, ya sea local o en la nube.
 	\end{enumerate}
 \item Requerimientos asociados a la API rest:
 	\begin{enumerate}
-	\item La API no sera de acceso publico, solo podra ser consultada por las aplicaciones que poseean un token de seguridad.
+	\item La API no sera de acceso publico, solo podrá ser consultada por las aplicaciones que poseen un \textit{token} de seguridad.
 	\end{enumerate}
-\item Requerimientos asociados a la interfaz de comunicacion con el sistema de control:	
+\item Requerimientos asociados a la interfaz de comunicación con el sistema de control:	
 	\begin{enumerate}	
-	\item La solucion debe poder consultar una serie de datos especificos a eleccion, de los elementos que pertenecen al sistema de control.
-	\item La comunicacion debe cumplir con el standard OPC.
+	\item La solución debe poder consultar una serie de datos específicos a elección, de los elementos que pertenecen al sistema de control.
+	\item La comunicación debe cumplir con el \textit{standard} OPC.
 	\end{enumerate}
 \end{enumerate}
 
@@ -254,7 +241,7 @@ A continuacion se listan los requirimientos en base a las distintas etapas de la
 \label{sec:entregables}
 
 \begin{consigna}{black}
-Se entregaran los siguientes elementos:
+Se entregarán los siguientes elementos:
 \begin{itemize}
 \item Manual de uso
 \item Diagrama esquemático
@@ -271,48 +258,48 @@ Se divide el trabajo del proyecto en tareas y subtareas. Para facilitar el segui
 consumirá más de 40 horas:
 
 \begin{enumerate}
-\item Investigacion (Total: 24 hs)
+\item Investigación (Total: 24 hs)
 	\begin{enumerate}
-	\item Busqueda de referencias a proyectos similares. (8 hs)
-	\item Busqueda y analisis de frameworks utiles para desarrollar las soluciones.  (8 hs)
-	\item Investigacion de los servicios de Azure, para integrar al desarrollo. (8 hs)
+	\item Búsqueda de referencias a proyectos similares. (8 hs)
+	\item Búsqueda y análisis de \textit{frameworks} útiles para desarrollar las soluciones.  (8 hs)
+	\item Investigación de los servicios de Azure, para integrar al desarrollo. (8 hs)
 	\end{enumerate}
 \item Desarrollo de la interfaz visual: (Total: 88 hs)
 	\begin{enumerate}
-	\item Diseño de interfaz para la lectura de codigos QR. (16 hs)
-	\item Diseño de interfaz para visualizacion de la informacion de los elementos del sistema de control. (16 hs)
-	\item Diseño de interfaz para guiar al operador a traves de los distintos pasos del procedimiento batch. (40 hs)
+	\item Diseño de interfaz para la lectura de códigos QR. (16 hs)
+	\item Diseño de interfaz para visualización de la información de los elementos del sistema de control. (16 hs)
+	\item Diseño de interfaz para guiar al operador a través de los distintos pasos del procedimiento \textit{batch}. (40 hs)
 	\item Pruebas, correcciones y mejoras. (16 hs)
 	\end{enumerate}
-\item Desarrollo de la logica para la interfaz visual: (Total: 136 hs)
+\item Desarrollo de la lógica para la interfaz visual: (Total: 136 hs)
 	\begin{enumerate}
-	\item Desarrollo de la logica para realizar las lecturas de codigos QR. (40 hs)
-	\item Desarrollo de la logica para realizar la interaccion del operador con los datos del sistema. (32 hs)
-	\item Desarrollo de la logica para guiar al operador a traves de los distintos pasos del procedimiento batch. (32 hs)
+	\item Desarrollo de la lógica para realizar las lecturas de códigos QR. (40 hs)
+	\item Desarrollo de la lógica para realizar la interacción del operador con los datos del sistema. (32 hs)
+	\item Desarrollo de la lógica para guiar al operador a través de los distintos pasos del procedimiento \textit{batch}. (32 hs)
 	\item Pruebas, correcciones y mejoras. (32 hs)
 	\end{enumerate}
-\item Desarrollo de la API rest (Total: 152 hs)
+\item Desarrollo de la API Rest (Total: 152 hs)
 	\begin{enumerate}
-	\item Investigacion de distintas tecnologias. (16 hs)
-	\item Desarrollo de la solucion:
+	\item Investigación de distintas tecnologías. (16 hs)
+	\item Desarrollo de la solución:
 		\begin{enumerate}
-			\item Programacion de endpoints. (40 hs)
-			\item Implementacion de medidas de seguridad de la API. (40 hs)
-			\item Hosting de la API. (40 hs)
+			\item Programación de \textit{endpoints}. (40 hs)
+			\item Implementación de medidas de seguridad de la API. (40 hs)
+			\item \textit{Hosting} de la API. (40 hs)
 		\end{enumerate}
 	\item Pruebas, correcciones y mejoras. (16 hs)
 	\end{enumerate}
-\item Desarrollo de la interfaz de comunicacion OPC. (Total: 160 hs)
+\item Desarrollo de la interfaz de comunicación OPC (Total: 160 hs)
 	\begin{enumerate}
-	\item Investigacion de frameworks y analisis del protocolo (40 hs)
-	\item Deploy del cliente OPC (40 hs)
-	\item Desarrollo de la comunicacion con el server OPC (40 hs)
+	\item Investigación de \textit{frameworks} y análisis del protocolo (40 hs)
+	\item \textit{Deploy} del cliente OPC (40 hs)
+	\item Desarrollo de la comunicación con el server OPC (40 hs)
 	\item Pruebas, correcciones y mejoras. (40 hs)
 	\end{enumerate}
 
 \item Pruebas integrales (Total: 32 hs)
 
-\item Documentacion (Total: 32 hs)
+\item Documentación (Total: 32 hs)
 
 \item Presentaciones al cliente (Total: 16 hs)
 \end{enumerate}
@@ -324,69 +311,43 @@ Cantidad total de horas: (640 hs)
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
+\begin{consigna}{black}
+Los tiempos de las tareas en la Figura \ref{fig:aon} se encuentran expresados en horas:
 
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
-
-\begin{figure}[htpb]
-\centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama en \textit{Activity on Node}}
-\label{fig:AoN}
+\begin{figure}[H]
+    \centering
+    \def\svgwidth{\columnwidth}  
+    \fontsize{7}{5}\fontencoding{T1}\fontfamily{lmss}\fontseries{eb}\selectfont
+%	\def\svgscale{1}
+    \input{aon.pdf_tex}
+	\caption{Diagrama Activity On Node}
+	\label{fig:aon}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
+En el AON se marco con color rojo el considerado camino critico del proyecto. Si bien hay un conjunto de tareas en paralelo a lo largo del camino critico, las tareas que atraviesa son las que se consideran de mayor riesgo y dificultad. 
 
-
+\end{consigna}
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
+\begin{consigna}{black}
+Se elaboro el siguiente diagrama considerando una cantidad de 15 horas semanales efectivas de trabajo:
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=10cm]{gantt_1.png}
+ \caption{Tabla con fechas de inicio y fin}
+ \label{figure:Tabla}
+\end{figure}
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
 
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
 
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=17cm]{gantt_2.png}
+ \caption{Diagrama de Gantt}
+ \label{figure:Diagrama de Gantt}
 \end{figure}
 
 \end{consigna}
@@ -394,143 +355,102 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
-
-\begin{table}[htpb]
-\label{tab:recursos}
+\begin{table}[H]
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|@{}}
+\setlength\arrayrulewidth{1pt}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
+\rowcolor[HTML]{CBCEFB} 
+\cellcolor[HTML]{CBCEFB}                             & \cellcolor[HTML]{CBCEFB}    & \multicolumn{2}{c|}{\cellcolor[HTML]{CBCEFB} \textbf {Recursos Requeridos}} \\ \cline{3-4} 
+\rowcolor[HTML]{CBCEFB} 
+\multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Codigo WBS}} & \multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Nombre Tarea}} & \textbf {PC}                          & \textbf {HoloLens2}                          \\ \hline
+\cellcolor[HTML]{CBCEFB} T1 & Investigación   &         24        &                      - 				  \\ \hline
+\cellcolor[HTML]{CBCEFB} T2 & Desarrollo de la interfaz visual   &         66        &            22            \\ \hline
+\cellcolor[HTML]{CBCEFB} T3 & Desarrollo de la lógica para la interfaz visual   &       116          &     20     \\ \hline
+\cellcolor[HTML]{CBCEFB} T4 & Desarrollo de la API Rest  &        152         &          -              \\ \hline
+\cellcolor[HTML]{CBCEFB} T5 & Desarrollo de la interfaz de comunicación OPC  &        160         &    -  \\ \hline
+\cellcolor[HTML]{CBCEFB} T6 & Pruebas integrales &        22         &    10  	\\ \hline
+\cellcolor[HTML]{CBCEFB} T7 & Documentación &        32       &        -   	\\ \hline
+\cellcolor[HTML]{CBCEFB} T8 & Presentaciones al cliente  &        -         &		16  \\ \hline
+\end{tabular}
 \end{table}
-
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
+El costo total del proyecto es de 3150 USD.
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+\begin{consigna}{black}
+\begin{table}[H]
+\setlength\arrayrulewidth{1pt}
+\begin{tabular}{|c|c|c|l|}
+\hline
+\cellcolor[HTML]{CBCEFB}                            & \cellcolor[HTML]{CBCEFB}                           & \multicolumn{2}{c|}{\cellcolor[HTML]{CBCEFB}}                        \\
+\multirow{-2}{*}{\cellcolor[HTML]{CBCEFB}\textbf {Categoría}} & \multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Detalle}}  & \multicolumn{2}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Costo}}} \\ \hline
+Trabajo Directo                                     & Valor Hora Responsable Proyecto : 640 hs (2 USD/hs) & \multicolumn{2}{c|}{1208 USD}                                         \\ \hline
+Costo Directo                                       & HoloLens2                                          & \multicolumn{2}{c|}{3000 USD}                                        \\ \hline
+Costo Indirecto                                     & Viaticos:                              & \multicolumn{2}{c|}{50 USD}                                             \\ \hline
+\multicolumn{2}{|c|}{\textbf {Total}}                                                                              & \multicolumn{2}{c|}{\textbf {4258 USD}}                                             \\ \hline
+\end{tabular}
+\end{table}
 
 \end{consigna}
 
-\begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
+\section{11. Matriz de asignación de responsabilidades}
+\label{sec:responsabilidades}
+\begin{consigna}{black}
+Se define la asignación de responsabilidades según las siguientes referencias:
+
+\begin{table}[H]
+\footnotesize
+\setlength\arrayrulewidth{1pt}
+\begin{tabular}{|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS DIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
-\end{tabularx}%
+\cellcolor[HTML]{CBCEFB}                                      & \cellcolor[HTML]{CBCEFB}                               \\
+\multirow{-2}{*}{\cellcolor[HTML]{CBCEFB}\textbf{Referencia}} & \multirow{-2}{*}{\cellcolor[HTML]{CBCEFB}\textbf{Rol}} \\ \hline
+P                                                             & Responsabilidad Primaria                               \\ \hline
+S                                                             & Responsabilidad Secundaria                             \\ \hline
+A                                                             & Aprobación                                             \\ \hline
+I                                                             & Informado                                              \\ \hline
+C                                                             & Consultado                                             \\ \hline
+\end{tabular}
 \end{table}
 
 
-\section{11. Matriz de asignación de responsabilidades}
-\label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
-
 \begin{table}[htpb]
 \centering
+\setlength\arrayrulewidth{1pt}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  Responsable &
-  Orientador &
-  Equipo &
-  Cliente \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
-  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
+\rowcolor[HTML]{CBCEFB} 
+\cellcolor[HTML]{CBCEFB} &
+  \cellcolor[HTML]{CBCEFB} &
+  \multicolumn{4}{c|}{\cellcolor[HTML]{CBCEFB}\textbf {Interesados en el proyecto}} \\ \cline{3-6} 
+\rowcolor[HTML]{CBCEFB} 
+\cellcolor[HTML]{CBCEFB} &
+  \cellcolor[HTML]{CBCEFB} &
+  \textbf {Responsable} &
+  \textbf {Orientador} &
+  \textbf {Equipo} &
+  \textbf {Cliente} \\ \cline{3-6} 
+\rowcolor[HTML]{CBCEFB} 
+\multirow{-3}{*}{\cellcolor[HTML]{CBCEFB}\begin{tabular}[c]{@{}c@{}}\textbf {Código}\\ \textbf{WBS}\end{tabular}} &
+  \multirow{-3}{*}{\cellcolor[HTML]{CBCEFB}\textbf {Nombre de la tarea}} &
   \authorname &
   \supname &
-  Nombre de alguien &
+  Guillermo Lamana &
   \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+T1 & Investigación & P & I & I & C \\ \hline
+T2 & Desarrollo de la interfaz visual & P & C & I & A \\ \hline
+T3 & Desarrollo de la lógica para la interfaz visual & P & C & I/C & C \\ \hline
+T4 & Desarrollo de la API Rest & P & C & - & I \\ \hline
+T5 & Desarrollo de la interfaz de comunicación OPC & P & C & I & C \\ \hline
+T6 & Pruebas integrales & P & C & I & A \\ \hline
+T7 & Documentación & P & C & - & I \\ \hline
+T8 & Presentaciones al cliente & P & I & C & A \\ \hline
 \end{tabular}%
 }
 \end{table}
-
-{\footnotesize
-Referencias:
-\begin{itemize}
-	\item P = Responsabilidad Primaria
-	\item S = Responsabilidad Secundaria
-	\item A = Aprobación
-	\item I = Informado
-	\item C = Consultado
-\end{itemize}
-} %footnotesize
-
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
-
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
 
 \end{consigna}
 
