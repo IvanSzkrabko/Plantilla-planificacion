@@ -26,14 +26,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="513.98716"
-     inkscape:cy="677.84608"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="443.42363"
+     inkscape:cy="780.35327"
      inkscape:document-units="mm"
-     inkscape:current-layer="g482"
+     inkscape:current-layer="switch446"
      showgrid="false"
      inkscape:window-width="1366"
-     inkscape:window-height="648"
+     inkscape:window-height="668"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
@@ -95,7 +95,7 @@
                font-size="16px"
                y="36"
                x="441"
-               style="font-weight:bold;font-size:16px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">Solucion</text>
+               style="font-weight:bold;font-size:16px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">Solución</text>
           </switch>
         </g>
         <path
@@ -201,7 +201,7 @@
                font-size="14px"
                y="105"
                x="256"
-               style="font-weight:bold;font-size:14px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">Logica .NET</text>
+               style="font-weight:bold;font-size:14px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">Lógica .NET</text>
           </switch>
         </g>
         <path
@@ -307,7 +307,7 @@
                font-size="14px"
                y="105"
                x="626"
-               style="font-weight:bold;font-size:14px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">Comunicacion OPC</text>
+               style="font-weight:bold;font-size:14px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">Comunicación OPC</text>
           </switch>
         </g>
         <rect

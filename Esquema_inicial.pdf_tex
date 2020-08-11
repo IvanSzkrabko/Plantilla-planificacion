@@ -54,15 +54,15 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Esquema_inicial.pdf}}%
-    \put(0.49943182,0.12538616){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Solucion}\end{tabular}}}}%
+    \put(0.49943182,0.12538616){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Solución}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{Esquema_inicial.pdf}}%
     \put(0.08465909,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Interfaz Visual}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{Esquema_inicial.pdf}}%
-    \put(0.28920455,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Logica .NET}\end{tabular}}}}%
+    \put(0.28920455,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Lógica .NET}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{Esquema_inicial.pdf}}%
     \put(0.49943182,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{API rest}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{Esquema_inicial.pdf}}%
-    \put(0.70965909,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Comunicacion OPC}\end{tabular}}}}%
+    \put(0.70965909,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Comunicación OPC}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{Esquema_inicial.pdf}}%
     \put(0.91420455,0.03479302){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Sistema de Control}\end{tabular}}}}%
   \end{picture}%

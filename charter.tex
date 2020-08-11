@@ -65,15 +65,14 @@
 
 \begin{tabularx}{\linewidth}{@{}|c|X|c|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                                          & 27/06/2020 \\ \hline
-1.1      & Primera versión, completo hasta punto 6                                                                                																						   & 10/07/2020 \\ \hline
-1.2      & Completo hasta punto 11 																						   & 30/07/2020 \\ \hline
-%1.2      & Otro ejemplo \newline
-%		   Con texto partido \newline
-%		   En varias líneas \newline
-%		   A propósito                                                                     & dd/mm/aaaa \\ \hline
+\rowcolor[HTML]{CBCEFB} 
+Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{CBCEFB}Detalles de los cambios realizados} & Fecha\\ \hline
+1.0      & Creación del documento                                                          
+		 & 27/06/2020 \\ \hline
+1.1      & Primera versión, completo hasta punto 6                                                                                         	 	 & 10/07/2020 \\ \hline
+1.2      & Completo hasta punto 11 																						   	 & 30/07/2020 \\ \hline
+1.3      & Completo todo el documento 																						 & 08/08/2020 \\ \hline  
+1.4      & Agrego historias de usuarios 																				     & 10/08/2020 \\ \hline                                                                   
 \end{tabularx}
 \end{table}
 
@@ -90,7 +89,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing.\authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de una aplicación de software para la supervisión y control de procesos \textit{batch} en la industria, y tendrá un presupuesto preliminar estimado de 640 hs de trabajo y \$ 2500, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing.\authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de una aplicación de software para la supervisión y control de procesos \textit{batch} en la industria, y tendrá un presupuesto preliminar estimado de 640 hs de trabajo y \$ 5000, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -114,7 +113,7 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 \begin{consigna}{black}
-El presente proyecto consiste en desarrollar una interfaz de realidad aumentada, para que los operadores de plantas industriales puedan interactuar con un sistema de control distribuido de una manera practica e innovadora. La solución hace foco en la capacitación de los operadores, mediante el uso de rutinas \textit{batch}. Con el fin de guiarlos a través de los distintos procedimientos industriales, como pueden ser, arranques o paradas de emergencia en equipos críticos como hornos, calderas y reactores. La solución se implementara sobre un equipo de realidad aumentada de ultima tecnología de Microsoft denominado HoloLens2. Su plataforma de desarrollo se divide en dos áreas. Por un lado tenemos las interfaces visuales, las cuales se diseñan en Unity3D, que es una conocida plataforma para el desarrollo de videojuegos. Por otro lado tenemos el backend, este se desarrollara en .NET utilizando CSharp como lenguaje de programación. La aplicación embebida se comunicara con un servidor local a través de una APIrest, y desde el mismo se enviaran los datos pertinentes al sistema de control distribuido de ABB, a través del \textit{standard} industrial OPC (\textit{Open Platform Communications}).  
+El presente proyecto consiste en desarrollar una interfaz de realidad aumentada, para que los operadores de plantas industriales puedan interactuar con un sistema de control distribuido de una manera práctica e innovadora. La solución hace foco en la capacitación de los operadores, mediante el uso de rutinas \textit{batch}. Las cuales permiten realizar una tarea compleja, sub dividiéndola en tareas simples organizadas de manera secuencial. Con esto se logra evitar que los procedimientos de trabajo se alteren y sufran desvíos. El objetivo es guiar al operador a través de los distintos procedimientos industriales, como pueden ser, arranques o paradas de emergencia en equipos críticos como hornos, calderas y reactores. La solución se implementará sobre un equipo de realidad aumentada de última tecnología de Microsoft denominado HoloLens2. Su plataforma de desarrollo se divide en dos áreas. Por un lado se encuentran las interfaces visuales, las cuales se diseñan en Unity3D, que es una conocida plataforma para el desarrollo de videojuegos. Por otro lado se tiene el backend, este se desarrollará en .NET utilizando CSharp como lenguaje de programación. La aplicación embebida se comunicará con un servidor local a través de una APIrest, y desde el mismo se enviarán los datos pertinentes al sistema de control distribuido de ABB, a través del \textit{standard} industrial OPC (\textit{Open Platform Communications}).  
 
 En la Figura \ref{fig:esquema_inicial} se puede observar de izquierda a derecha el flujo de la información, que comienza con un \textit{input} en la interfaz visual por parte del operador y termina con una acción determinada en el sistema de control.
 
@@ -144,7 +143,7 @@ En la Figura \ref{fig:esquema_inicial} se puede observar de izquierda a derecha 
 %\label{tab:interesados}
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} 
+\rowcolor[HTML]{CBCEFB} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 					\\ \hline
 Auspiciante   & Víctor Toledo     & ABB         	& Gerente de Operaciones	\\ \hline
 Cliente       & \clientename      &\empclientename	& Gerente de Ingeniería     \\ \hline
@@ -217,16 +216,16 @@ A continuación se listan los requerimientos en base a las distintas etapas de l
 \item Requerimientos asociados al desarrollo de la interfaz visual:
 	\begin{enumerate}
 	\item La interfaz debe ser intuitiva y simple.
-	\item El idioma definido es ingles.
+	\item El idioma definido es Español.
 	\end{enumerate}
 \item Requerimientos asociados al desarrollo de lógica en .NET:
 	\begin{enumerate}
-	\item La aplicación debe ser fluida y responder sin demoras apreciables por el operador, estableciéndose así el limite máximo de espera en 2 segundos.
+	\item La aplicación debe ser fluida y responder sin demoras apreciables por el operador, estableciéndose así el límite máximo de espera en 2 segundos.
 	\item La aplicación debe poder hacer operaciones GET y POST sobre un servidor web, ya sea local o en la nube.
 	\end{enumerate}
 \item Requerimientos asociados a la API rest:
 	\begin{enumerate}
-	\item La API no sera de acceso publico, solo podrá ser consultada por las aplicaciones que poseen un \textit{token} de seguridad.
+	\item La API no será de acceso público, solo podrá ser consultada por las aplicaciones que poseen un \textit{token} de seguridad.
 	\end{enumerate}
 \item Requerimientos asociados a la interfaz de comunicación con el sistema de control:	
 	\begin{enumerate}	
@@ -236,6 +235,53 @@ A continuación se listan los requerimientos en base a las distintas etapas de l
 \end{enumerate}
 
 \end{consigna}
+
+\section{Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
+\begin{consigna}{black}
+La Ponderación tendrá un rango de calificación de 1 a 5 y se basará en el esfuerzo de desarrollo, donde 1 implica el máximo esfuerzo.
+
+La Prioridad tendrá un rango de calificación de 1 a 5 y se basará en la funcionalidad que aporta al sistema, donde 1 implica máxima prioridad.
+\end{consigna}
+
+\begin{itemize}
+\item Historia 1
+\begin{itemize}
+\item Ponderación: 1
+\item Prioridad: 1
+\end{itemize}
+Como Usuario, quiero poder visualizar datos del sistema de control como bombas, motores, válvulas y tanques.
+
+\item Historia 2
+\begin{itemize}
+\item Ponderación: 3
+\item Prioridad: 1
+\end{itemize}
+Como Usuario, quiero poder usar el sistema en un ámbito industrial.
+
+\item Historia 3
+\begin{itemize}
+\item Ponderación: 2
+\item Prioridad: 2
+\end{itemize}
+Como Usuario, quiero poder usar la solución con sistemas de control de varios proveedores.
+
+\item Historia 4 
+\begin{itemize}
+\item Ponderación: 3
+\item Prioridad: 2
+\end{itemize}
+Como Usuario, quiero tener un interfaz de manejo sencilla y práctica.
+
+\item Historia 5 
+\begin{itemize}
+\item Ponderación: 2
+\item Prioridad: 2
+\end{itemize}
+Como Usuario, quiero que la infraestructura necesaria para implementar la solución sea \textit{on-premise}.
+
+\end{itemize}
+
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -324,7 +370,7 @@ Los tiempos de las tareas en la Figura \ref{fig:aon} se encuentran expresados en
 	\label{fig:aon}
 \end{figure}
 
-En el AON se marco con color rojo el considerado camino critico del proyecto. Si bien hay un conjunto de tareas en paralelo a lo largo del camino critico, las tareas que atraviesa son las que se consideran de mayor riesgo y dificultad. 
+En el AON se marco con color rojo el considerado camino crítico del proyecto. Si bien hay un conjunto de tareas en paralelo a lo largo del camino crítico, las tareas que atraviesa son las que se consideran de mayor riesgo y dificultad. 
 
 \end{consigna}
 
@@ -332,13 +378,12 @@ En el AON se marco con color rojo el considerado camino critico del proyecto. Si
 \label{sec:gantt}
 
 \begin{consigna}{black}
-Se elaboro el siguiente diagrama considerando una cantidad de 15 horas semanales efectivas de trabajo:
+Se elaboró el siguiente diagrama considerando una cantidad de 15 horas semanales efectivas de trabajo:
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=10cm]{gantt_1.png}
- \caption{Tabla con fechas de inicio y fin}
- \label{figure:Tabla}
+ \caption{Fechas asociadas a las tareas}
 \end{figure}
 
 
@@ -363,7 +408,7 @@ Se elaboro el siguiente diagrama considerando una cantidad de 15 horas semanales
 \rowcolor[HTML]{CBCEFB} 
 \cellcolor[HTML]{CBCEFB}                             & \cellcolor[HTML]{CBCEFB}    & \multicolumn{2}{c|}{\cellcolor[HTML]{CBCEFB} \textbf {Recursos Requeridos}} \\ \cline{3-4} 
 \rowcolor[HTML]{CBCEFB} 
-\multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Codigo WBS}} & \multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Nombre Tarea}} & \textbf {PC}                          & \textbf {HoloLens2}                          \\ \hline
+\multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Código WBS}} & \multirow{-2}{*}{\cellcolor[HTML]{CBCEFB} \textbf {Nombre Tarea}} & \textbf {PC}                          & \textbf {HoloLens2}                          \\ \hline
 \cellcolor[HTML]{CBCEFB} T1 & Investigación   &         24        &                      - 				  \\ \hline
 \cellcolor[HTML]{CBCEFB} T2 & Desarrollo de la interfaz visual   &         66        &            22            \\ \hline
 \cellcolor[HTML]{CBCEFB} T3 & Desarrollo de la lógica para la interfaz visual   &       116          &     20     \\ \hline
@@ -377,7 +422,7 @@ Se elaboro el siguiente diagrama considerando una cantidad de 15 horas semanales
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
-El costo total del proyecto es de 3150 USD.
+El costo total del proyecto es de 4258 USD.
 
 \begin{consigna}{black}
 \begin{table}[H]
@@ -457,63 +502,72 @@ T8 & Presentaciones al cliente & P & I & C & A \\ \hline
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+\begin{consigna}{black}
+a)Se identifican los siguientes riesgos que pueden afectar la planificación prevista:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+Riesgo 1: rotura del Hololens2
 \begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
+\item Severidad (S): 10. Pone en riesgo la concreción del proyecto dado que no podrá utilizarse la interfaz principal.\\
+\item Probabilidad de ocurrencia (O): 1. La manipulación del equipo se hace con sumo cuidado y de todas formas es un equipo robusto.\\ 
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: las licencias de los \textit{framework} de desarrollo dejan de ser gratuitas.
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
+\item Severidad (S): 8. Pone en riesgo la fecha de entrega del proyecto y la planificación, dado que habría que capacitarse en un nuevo \textit{framework} de desarrollo o pagar las licencias, lo cual incrementaría el costo del proyecto.\\
+\item Probabilidad de ocurrencia (O): 1. Los \textit{framework} son muy usados en el desarrollo de software y las políticas de las empresas no tienden a ser restrictivas con sus productos.\\ 
+\end{itemize}   
 
-Riesgo 3:
+Riesgo 3: falla de la comunicación OPC
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
+\item Severidad (S): 8. El desarrollo del cliente OPC para comunicarse con el sistema de control no es exitoso y falla la comunicación en esa etapa.\\
+\item Probabilidad de ocurrencia (O): 5. Al ser una interfaz compleja de desarrollar y no poseer experiencia previa, el riesgo es mayor junto con la probabilidad de ocurrencia\\ 
+\end{itemize}   
 
+Riesgo 4: pérdida del repositorio de código
+\begin{itemize}
+\item Severidad (S): 8. Durante el desarrollo de software podría romperse el disco de la máquina y perder el trabajo de varias semanas si no se ha realizado un backup. Esto demoraría el proyecto.\\
+\item Probabilidad de ocurrencia (O): 1. Utilizando GIT es muy poco probable perder los archivos del servidor, y el único riesgo sería la rotura del disco de la computadora de desarrollo, pero con la precaución de subir los cambios al repositorio diariamente, el riesgo es mínimo.\\ 
+\end{itemize}   
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+Riesgo 5: corrupción del \textit{firmware}
+\begin{itemize}
+\item Severidad (S): 10. En caso de corromper el \textit{firmware} durante una actualización o descarga del programa, se pondría en riesgo la concreción completa del proyecto dado que no podrá utilizarse la interfaz principal.\\
+\item Probabilidad de ocurrencia (O): 1. Dado que el Hololens2 es un sistema embebido debería poder recuperarse en caso de una falla de programación o actualización de \textit{firmware}.\\ 
+\end{itemize}   
+
+b) Tabla de gestión de riesgos:  
+Para la tabla de gestión de riesgos, se tomarán medidas de mitigación en los riesgos cuyos
+números de RPN sean mayores a 25. El RPN se calcula como RPN=SxO.
 
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} 
+\rowcolor[HTML]{CBCEFB} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Rotura del Hololens2 & 10  & 1  &  10   &  -  &  -  &  -    \\ \hline
+Las licencias de los \textit{framework} de desarrollo dejan de ser gratuitas. & 8 & 1  &  8   &  -  &  -  & - \\ \hline
+Falla de la comunicación OPC       & 8  & 5 &  40   &  5  &  2  &   10   \\ \hline
+Pérdida del repositorio de código       & 8 & 1 &  8   &  -  &  -  &  -    \\ \hline
+Corrupción del \textit{firmware}       &  10  & 1 &  1   &  -  & -  & -     \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a ....
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 10
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
+c) Plan de mitigación del riesgo que excede el RPN máximo establecido de 10:
  
-Riesgo 1: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+Riesgo 3:\\
+Nueva asignación de S y O, con su respectiva justificación:\\
 
-Riesgo 2: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación)
+- Severidad (S*): 5. Dado que se conoce el riesgo de esta implementación, se le dedico más tiempo en el Gantt que el estimado inicialmente, además en última instancia se dispone de una persona con experiencia en el ámbito laboral al que se podría consultar eventualmente.
+
+- Probabilidad de ocurrencia (O*): 2. Tomando ambas medidas de mitigación en consideración, la probabilidad de ocurrencia se reduciría a 2.
+
+Cómo resultado final el RPN* del riesgo 3 es reducido a 10.
 
 \end{consigna}
 
@@ -521,30 +575,67 @@ Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: Copiar acá el requerimiento.
-
-Verificación y validación:
+\begin{consigna}{black}
+A continuación se detallan los requerimientos necesarios para mantener la calidad del proyecto:
 
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente:\\
-Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido:\\
-Detallar  
+\item Req \#1: La interfaz para el operador deberá ser intuitiva
+
+
+\begin{itemize}
+\item Verificación\\
+Se contará la cantidad de clicks para lograr un cometido en la aplicación, se considera simple si el número es menor a 3 saltos de pantallas.
+\item Validación\\
+Durante las presentaciones al cliente el mismo registrara un  informe sobre su experiencia de usuario.  
 \end{itemize}
 
+
+\item Req \#2: La comunicación con el sistema de control deberá ser menor a 2(dos) segundos
+
+
+\begin{itemize}
+\item Verificación\\
+Se medirá el tiempo luego de clickear en al interfaz visual, para eso se elaborara una lógica dedicada a la medición de tiempos de respuesta logueando los momentos de petición y actualización. 
+\item Validación\\
+El cliente podrá experimentar la respuesta durante las presentaciones al mismo.  
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, etc.
 
+\item Req \#3: La comunicación con el sistema de control deberá ser compatible con el protocolo OPC-DA 
+
+
+\begin{itemize}
+\item Verificación:\\
+El sistema de control utiliza el protocolo especificado por lo tanto al validar el Req4 estaríamos validando este requerimiento. 
+\item Validación\\
+El cliente podrá validar esta funcionalidad al interactuar con el sistema dado que el los datos a visualizar provendrán del sistema de control.  
+\end{itemize}
+
+
+\item Req \#4: La comunicación OPC será bidireccional, permitirá leer y escribir variables del sistema de control.
+
+\begin{itemize}
+\item Verificación\\
+Se realizarán pruebas prácticas que demuestren las posibilidades de escritura y lectura sobre el sistema de control. 
+\item Validación\\
+El cliente podrá validar la funcionalidad directamente al interactuar con el sistema.
+\end{itemize}
+
+\item Req \#5: El código de la aplicación deberá ser desarrollado bajo un gestor de versiones
+
+\begin{itemize}
+\item Verificación\\
+Se deberá disponer de un repositorio GIT con el código fuente de la solución.
+\item Validación\\
+El cliente tendrá acceso al repositorio y podrá analizar el avance a lo largo de la etapas de desarrollo.
+\end{itemize}
+\end{itemize}
 \end{consigna}
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
-
-\begin{consigna}{red}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+\begin{consigna}{black}
 El plan de comunicación del proyecto es el siguiente:
 \end{consigna}
 
@@ -555,17 +646,23 @@ El plan de comunicación del proyecto es el siguiente:
 \begin{table}[htpb]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|L|L|L|L|L|L|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
+\rowcolor[HTML]{CBCEFB} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{CBCEFB}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
+\rowcolor[HTML]{CBCEFB} 
+¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicación & Responsable \\ \hline
+
+Plan de proyecto& Cliente &Definir el plan de proyecto&Mensual&Reunión online & Iván Szkrabko\\ \hline
+
+Estado de avance& Cliente, Director de Proyecto&Informar sobre avances, solicitar comentarios o correcciones& Una vez por mes & Reunión online & Iván Szkrabko\\ \hline
+
+Consultas			&Cliente, Director de Proyecto, Auspiciante&Alinear el desarrollo con el objetivo del cliente&Mensual& Reunión online & Iván Szkrabko\\ \hline
+
+Avances funcionales	&Cliente, Director de Proyecto, Auspiciante&Informar y recibir feedback&Con cada hito de desarrollo& Reunión online & Iván Szkrabko\\ \hline
+
+Finalización y cierre&Cliente, Director de Proyecto&Presentación pública del proyecto&Fecha pactada& Reunión presencial & Iván Szkrabko\\ \hline
+
 \end{tabular}%
 }
 \end{table}
@@ -573,52 +670,60 @@ El plan de comunicación del proyecto es el siguiente:
 \section{15. Gestión de Compras}
 \label{sec:compras}
 
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
+\begin{consigna}{black}
+El proyecto solo requirió la compra del Hololens2, el mismo ya fue suministrado antes de comenzar el proyecto por lo tanto no hay riesgos asociados a la compra de los materiales necesarios para ejecutar el proyecto.
 \end{consigna}
 
 \section{16. Seguimiento y control}
 \label{sec:seguimiento}
 
-\begin{consigna}{red}
-Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
-
-El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
-
+\begin{consigna}{black}
+Para cada tarea del proyecto, se establece la frecuencia e indicadores con los que se seguirá su avance
+y quien será el responsable de dicho seguimiento.
 \end{consigna}
 
-\begin{table}[!htpb]
+\begin{table}[H]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|L|L|L|L|L|L|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
-%}
+\rowcolor[HTML]{CBCEFB} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{CBCEFB}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
+\rowcolor[HTML]{CBCEFB} 
+Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunicación \\ \hline
+1.Investigación & Adopción de los frameworks & Al finalizar la etapa & Iván Szkrabko & Director & Reunión online  \\ \hline
+2.Desarrollo de la interfaz visual & Porcentaje de finalización de la UI & Durante el desarrollo & Iván Szkrabko & Cliente & Reunión online  \\ \hline
+3.Desarrollo de la lógica para la interfaz visual & Porcentaje de conexiones al UI implementadas & Durante el desarrollo & Iván Szkrabko & Director & Reunión online  \\ \hline
+4.Desarrollo de la API Rest & Cantidad de endpoints implementados & Durante el desarrollo & Iván Szkrabko & Director & Reunión online  \\ \hline
+5.Desarrollo de la interfaz de comunicación OPC & Hitos alcanzados & Durante el desarrollo & Iván Szkrabko & Director & Reunión online \\ \hline
+6.Pruebas integrales & Feedbacks del cliente & Durante el desarrollo & Iván Szkrabko & Cliente & Reunión online  \\ \hline
+7.Documentación & Porcentaje de documentos elaborados & Al finalizar un documento & Iván Szkrabko & Cliente & Reunión online  \\ \hline
+8.Presentaciones al cliente & Feedbacks del cliente & Durante cada presentación & Iván Szkrabko & Cliente & Reunión online  \\ \hline
+\end{tabular}%
+}
 \end{table}
 
 \section{17. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
+\begin{consigna}{black}
 Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
+1)Seguimiento del Plan de Proyecto:
 \begin{itemize}
-\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-  - Indicar esto y quién financiará los gastos correspondientes.
+\item El responsable del proyecto se encargará de verificar la ejecución del proyecto en base al análisis realizado en el plan de proyecto. Para eso se compararan los resultados mensuales del proyecto con el diagrama de Gantt especificado y se analizaran los desvíos. El objetivo es lograr al menos una lección aprendida del proyecto.
+\end{itemize}
+
+2)Identificación de las técnicas, procedimientos y problemáticas durante la ejecución del proyecto:
+\begin{itemize}
+\item El responsable del proyecto analizará las problemáticas que surgieron en el proyecto y no habían sido contempladas. Se evaluará cómo se reaccionó al problema y se planteara una solución que podría haber sido más óptima dada la secuencia de eventos posteriores. El objetivo es analizar si la adopción de un procedimiento, podría haber evitado o solucionado el problema más rápidamente.
+\end{itemize}
+3)Acto de agradecimiento a los interesados:
+\begin{itemize}
+\item El responsable del proyecto se encargará de comunicar vía mail a todos los interesados el agradecimiento por participar del proyecto, los datos de contacto de todos los interesados y el feedback que surja de los ítems 1 y 2 del proceso de cierre. El objetivo es compartir las lecciones aprendidas al resto del equipo.
+
+\item Finalmente se realizará la presentación pública del proyecto, dando paso a la defensa del mismo
+ante los Jurados.
 \end{itemize}
 
 \end{consigna}
